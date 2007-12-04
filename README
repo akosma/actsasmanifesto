@@ -6,7 +6,14 @@ This is a basic manifesto generator for Ruby on Rails.
 Install
 =======
 
-How to use:
+Install the plugin using the following command:
+
+  script/plugin install http://actsasmanifesto.googlecode.com/svn/trunk
+  
+If you want, you could rename the "trunk" folder in your vendor/plugins directory, to a nicer name (like actsasmanifesto or something like that).
+
+How to use
+==========
 
   ./script/generate manifesto
 

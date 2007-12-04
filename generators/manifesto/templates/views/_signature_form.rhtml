@@ -14,6 +14,6 @@ Your message (optional):<br />
 <%= text_area :new_signature, :comment %><br />
 
 Your e-mail privacy preferences:<br />
-<%= select :new_signature, :email_privacy, Signature.valid_email_privacy_values %>
+<%= select :new_signature, :email_privacy, Signature.valid_email_privacy_values %><br />
 
 <%= hidden_field :new_signature, :manifesto_id %>
