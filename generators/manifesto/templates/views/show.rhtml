@@ -1,0 +1,26 @@
+<div id="manifesto">
+<h1><%= h @manifesto.title %></h1>
+
+<p>Created by <%= mail_to(@manifesto.email, @manifesto.author, :encode => "javascript") %> on <%= @manifesto.created_at.strftime("%B %d, %Y") %></p>
+
+<%= h @manifesto.description %>
+
+<p><%= link_to "Sign the manifesto", "#sign" %></p>
+</div>
+
+<div id="signatures">
+<h2>Signatures</h2>
+
+<ul>
+  <%= render :partial => "signature", :collection => @manifesto.signatures %>
+</ul>
+</div>
+
+<div id="signature_form">
+<a name="sign"><h2>Sign the Manifesto</h2></a>
+
+<% form_tag :action => "sign" do %>
+  <%= render :partial => "signature_form" %>
+  <%= submit_tag "Sign!" %>
+<% end %>
+</div>

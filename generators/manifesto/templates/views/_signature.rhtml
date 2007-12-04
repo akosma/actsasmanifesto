@@ -1,0 +1,19 @@
+<li class="<%= cycle :odd, :even %>"><% if signature.is_email_visible_to_all %>
+  <%= mail_to(signature.email, signature.name, :encode => "javascript") %>
+<% else %>
+  <%= h signature.name %>
+<% end %>
+on <%= @manifesto.created_at.strftime("%B %d, %Y %I:%M %p") %>
+
+<% if signature.age %>
+  , <%= h signature.age %> years old
+<% end %>
+
+<% if !signature.country.empty? %>
+  , from <%= h signature.country %>
+<% end %>
+
+<% if !signature.comment.empty? %>
+  :<br />
+  <%= h signature.comment %>
+<% end %></li>

@@ -1,0 +1,7 @@
+<ul>
+<% @manifestos.each do |m| %>
+  <li><%= link_to m.title, manifesto_path(m) %> (<%= m.signatures_count %> signatures)</li>
+<% end %>
+</ul>
+
+<%= link_to "Create new Manifesto", new_manifesto_path %>

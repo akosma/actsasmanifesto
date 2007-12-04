@@ -1,0 +1,19 @@
+Your name (mandatory):<br />
+<%= text_field :new_signature, :name, :maxlength => 50 %><br />
+
+Your e-mail (mandatory):<br />
+<%= text_field :new_signature, :email, :maxlength => 50 %><br />
+
+Your age (optional):<br />
+<%= text_field :new_signature, :age %><br />
+
+Your country (optional):<br />
+<%= text_field :new_signature, :country, :maxlength => 50 %><br />
+
+Your message (optional):<br />
+<%= text_area :new_signature, :comment %><br />
+
+Your e-mail privacy preferences:<br />
+<%= select :new_signature, :email_privacy, Signature.valid_email_privacy_values %>
+
+<%= hidden_field :new_signature, :manifesto_id %>
